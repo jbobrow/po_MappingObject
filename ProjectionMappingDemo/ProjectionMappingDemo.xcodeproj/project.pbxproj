@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B785FD116B0A404004058DA /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FD016B0A404004058DA /* AppDelegate.mm */; };
+		2B785FD316B0A404004058DA /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B785FD216B0A404004058DA /* en.strings */; };
+		2B785FD516B0A404004058DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FD416B0A404004058DA /* main.m */; };
+		2B785FD716B0A404004058DA /* main.pch in Resources */ = {isa = PBXBuildFile; fileRef = 2B785FD616B0A404004058DA /* main.pch */; };
+		2B785FDA16B0A404004058DA /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B785FD916B0A404004058DA /* main.xib */; };
+		2B785FDD16B0A404004058DA /* poOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FDC16B0A404004058DA /* poOpenGLView.mm */; };
+		2B785FE116B0A404004058DA /* ProjectionMappingDemoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FE016B0A404004058DA /* ProjectionMappingDemoApp.cpp */; };
+		2B785FE316B0A404004058DA /* AppConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FE216B0A404004058DA /* AppConfig.cpp */; };
+		2B785FE516B0A405004058DA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B785FE416B0A405004058DA /* OpenSans-Regular.ttf */; };
+		2B785FF116B0A6B3004058DA /* MappingObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B785FEF16B0A6B3004058DA /* MappingObject.cpp */; };
+		2BA2E5DD170501AB00C473F4 /* poMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2E5DB170501AB00C473F4 /* poMesh2D.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B785FC816B0A404004058DA /* ProjectionMappingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectionMappingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B785FCD16B0A404004058DA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../platform/Debug.xcconfig; sourceTree = "<group>"; };
+		2B785FCE16B0A404004058DA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../platform/Release.xcconfig; sourceTree = "<group>"; };
+		2B785FCF16B0A404004058DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../platform/AppDelegate.h; sourceTree = "<group>"; };
+		2B785FD016B0A404004058DA /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../platform/AppDelegate.mm; sourceTree = "<group>"; };
+		2B785FD216B0A404004058DA /* en.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en.strings; path = ../platform/en.strings; sourceTree = "<group>"; };
+		2B785FD416B0A404004058DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../platform/main.m; sourceTree = "<group>"; };
+		2B785FD616B0A404004058DA /* main.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = main.pch; path = ../platform/main.pch; sourceTree = "<group>"; };
+		2B785FD816B0A404004058DA /* main.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = main.plist; path = ../platform/main.plist; sourceTree = "<group>"; };
+		2B785FD916B0A404004058DA /* main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = main.xib; path = ../platform/main.xib; sourceTree = "<group>"; };
+		2B785FDB16B0A404004058DA /* poOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poOpenGLView.h; path = ../platform/poOpenGLView.h; sourceTree = "<group>"; };
+		2B785FDC16B0A404004058DA /* poOpenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = poOpenGLView.mm; path = ../platform/poOpenGLView.mm; sourceTree = "<group>"; };
+		2B785FDF16B0A404004058DA /* ProjectionMappingDemoApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectionMappingDemoApp.h; sourceTree = "<group>"; };
+		2B785FE016B0A404004058DA /* ProjectionMappingDemoApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectionMappingDemoApp.cpp; sourceTree = "<group>"; };
+		2B785FE216B0A404004058DA /* AppConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppConfig.cpp; sourceTree = "<group>"; };
+		2B785FE416B0A405004058DA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../platform/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		2B785FEF16B0A6B3004058DA /* MappingObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MappingObject.cpp; sourceTree = "<group>"; };
+		2B785FF016B0A6B3004058DA /* MappingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingObject.h; sourceTree = "<group>"; };
+		2BA2E5DB170501AB00C473F4 /* poMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = poMesh2D.cpp; sourceTree = "<group>"; };
+		2BA2E5DC170501AB00C473F4 /* poMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poMesh2D.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B785FC516B0A404004058DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B785FBD16B0A404004058DA = {
+			isa = PBXGroup;
+			children = (
+				2B785FCB16B0A404004058DA /* ProjectionMappingDemo */,
+				2B785FC916B0A404004058DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B785FC916B0A404004058DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B785FC816B0A404004058DA /* ProjectionMappingDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B785FCB16B0A404004058DA /* ProjectionMappingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2B785FCC16B0A404004058DA /* platform */,
+				2B785FDE16B0A404004058DA /* application */,
+			);
+			path = ProjectionMappingDemo;
+			sourceTree = "<group>";
+		};
+		2B785FCC16B0A404004058DA /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				2B785FCD16B0A404004058DA /* Debug.xcconfig */,
+				2B785FCE16B0A404004058DA /* Release.xcconfig */,
+				2B785FCF16B0A404004058DA /* AppDelegate.h */,
+				2B785FD016B0A404004058DA /* AppDelegate.mm */,
+				2B785FD216B0A404004058DA /* en.strings */,
+				2B785FD416B0A404004058DA /* main.m */,
+				2B785FD616B0A404004058DA /* main.pch */,
+				2B785FD816B0A404004058DA /* main.plist */,
+				2B785FD916B0A404004058DA /* main.xib */,
+				2B785FDB16B0A404004058DA /* poOpenGLView.h */,
+				2B785FDC16B0A404004058DA /* poOpenGLView.mm */,
+				2B785FE416B0A405004058DA /* OpenSans-Regular.ttf */,
+			);
+			name = platform;
+			sourceTree = "<group>";
+		};
+		2B785FDE16B0A404004058DA /* application */ = {
+			isa = PBXGroup;
+			children = (
+				2B785FDF16B0A404004058DA /* ProjectionMappingDemoApp.h */,
+				2B785FE016B0A404004058DA /* ProjectionMappingDemoApp.cpp */,
+				2B785FE216B0A404004058DA /* AppConfig.cpp */,
+				2B785FEF16B0A6B3004058DA /* MappingObject.cpp */,
+				2B785FF016B0A6B3004058DA /* MappingObject.h */,
+				2BA2E5DB170501AB00C473F4 /* poMesh2D.cpp */,
+				2BA2E5DC170501AB00C473F4 /* poMesh2D.h */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B785FC716B0A404004058DA /* ProjectionMappingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B785FE816B0A405004058DA /* Build configuration list for PBXNativeTarget "ProjectionMappingDemo" */;
+			buildPhases = (
+				2B785FC416B0A404004058DA /* Sources */,
+				2B785FC516B0A404004058DA /* Frameworks */,
+				2B785FC616B0A404004058DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectionMappingDemo;
+			productName = ProjectionMappingDemo;
+			productReference = 2B785FC816B0A404004058DA /* ProjectionMappingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B785FBF16B0A404004058DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 2B785FC216B0A404004058DA /* Build configuration list for PBXProject "ProjectionMappingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B785FBD16B0A404004058DA;
+			productRefGroup = 2B785FC916B0A404004058DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B785FC716B0A404004058DA /* ProjectionMappingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B785FC616B0A404004058DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B785FD316B0A404004058DA /* en.strings in Resources */,
+				2B785FD716B0A404004058DA /* main.pch in Resources */,
+				2B785FDA16B0A404004058DA /* main.xib in Resources */,
+				2B785FE516B0A405004058DA /* OpenSans-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B785FC416B0A404004058DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B785FD116B0A404004058DA /* AppDelegate.mm in Sources */,
+				2B785FD516B0A404004058DA /* main.m in Sources */,
+				2B785FDD16B0A404004058DA /* poOpenGLView.mm in Sources */,
+				2B785FE116B0A404004058DA /* ProjectionMappingDemoApp.cpp in Sources */,
+				2B785FE316B0A404004058DA /* AppConfig.cpp in Sources */,
+				2B785FF116B0A6B3004058DA /* MappingObject.cpp in Sources */,
+				2BA2E5DD170501AB00C473F4 /* poMesh2D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2B785FE616B0A405004058DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B785FCD16B0A404004058DA /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2B785FE716B0A405004058DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B785FCE16B0A404004058DA /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		2B785FE916B0A405004058DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2B785FEA16B0A405004058DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B785FC216B0A404004058DA /* Build configuration list for PBXProject "ProjectionMappingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B785FE616B0A405004058DA /* Debug */,
+				2B785FE716B0A405004058DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B785FE816B0A405004058DA /* Build configuration list for PBXNativeTarget "ProjectionMappingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B785FE916B0A405004058DA /* Debug */,
+				2B785FEA16B0A405004058DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B785FBF16B0A404004058DA /* Project object */;
+}
