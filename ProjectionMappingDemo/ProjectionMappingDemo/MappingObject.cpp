@@ -1,5 +1,5 @@
 #include "MappingObject.h"
-
+#include "poApplication.h"
 
 Handle::Handle(int x, int y)
 :	poOvalShape(10,10,50)
@@ -98,7 +98,7 @@ void MappingObject::eventHandler(poEvent *event)
 		
 		case PO_MOUSE_DRAG_INSIDE_EVENT:
 		{
-			h->position = event->globalPosition - this->position;
+			h->position = objectToLocal(event->source, event->localPosition);
 			
 			int idx = h->y * mesh->numColumns + h->x;
 			mesh->points[idx] = h->position;

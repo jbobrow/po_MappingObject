@@ -17,9 +17,12 @@ ProjectionMappingDemoApp::ProjectionMappingDemoApp() {
 	poFBO* imageFBO = new poFBO(image->getWidth(),image->getHeight());
 	image->addModifier(imageFBO);
 		
+	container = new poObject();
+	container->position.set(50,50,0);
+	addChild(container);
+	
 	map = new MappingObject(20, 20, imageFBO->getColorTexture());
-	map->position = poPoint(50,50);
-	addChild(map);
+	container->addChild(map);
 	
 	addEvent(PO_KEY_DOWN_EVENT, this);
 }
