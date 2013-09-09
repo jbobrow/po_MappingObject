@@ -16,9 +16,9 @@ class MappingHandle : public poOvalShape
 public:
 	MappingHandle(int, int);
 
+	int index;
 	int x, y;
 	bool selected;
-	
 };
 
 class MappingObject : public poObject
@@ -33,6 +33,7 @@ public:
 	void showHandles();
 	void hideHandles();
 	
+	void updateSelectedHandle();
 	void moveSelectedHandles(poPoint p);
 	
 	virtual void update();
@@ -43,6 +44,8 @@ public:
 	poMesh2D	*mesh;
 	int numRows;
 	int numCols;
+	
+	int index_selected;
 	
 	std::vector<MappingHandle *> handles;
 };
