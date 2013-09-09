@@ -266,8 +266,8 @@
 	<item name="335" type="3">point(525,400,0)</item>
 	<item name="336" type="3">point(584,411,0)</item>
 	<item name="337" type="3">point(620,408,0)</item>
-	<item name="338" type="3">point(656,407,0)</item>
-	<item name="339" type="3">point(694,386,0)</item>
+	<item name="338" type="3">point(637,409,0)</item>
+	<item name="339" type="3">point(661,399,0)</item>
 	<item name="34" type="3">point(490,25,0)</item>
 	<item name="340" type="3">point(-14,420,0)</item>
 	<item name="341" type="3">point(13,428,0)</item>
@@ -312,7 +312,7 @@
 	<item name="377" type="3">point(606,473,0)</item>
 	<item name="378" type="3">point(643,500,0)</item>
 	<item name="379" type="3">point(717,450,0)</item>
-	<item name="38" type="3">point(638,12,0)</item>
+	<item name="38" type="3">point(628,22,0)</item>
 	<item name="380" type="3">point(-20,469,0)</item>
 	<item name="381" type="3">point(6,493,0)</item>
 	<item name="382" type="3">point(42,510,0)</item>
@@ -323,7 +323,7 @@
 	<item name="387" type="3">point(241,501,0)</item>
 	<item name="388" type="3">point(278,486,0)</item>
 	<item name="389" type="3">point(315,475,0)</item>
-	<item name="39" type="3">point(692,29,0)</item>
+	<item name="39" type="3">point(663,31,0)</item>
 	<item name="390" type="3">point(350,475,0)</item>
 	<item name="391" type="3">point(385,475,0)</item>
 	<item name="392" type="3">point(422,434,0)</item>
@@ -354,8 +354,8 @@
 	<item name="55" type="3">point(525,50,0)</item>
 	<item name="56" type="3">point(560,50,0)</item>
 	<item name="57" type="3">point(595,50,0)</item>
-	<item name="58" type="3">point(648,41,0)</item>
-	<item name="59" type="3">point(684,58,0)</item>
+	<item name="58" type="3">point(624,48,0)</item>
+	<item name="59" type="3">point(664,48,0)</item>
 	<item name="6" type="3">point(210,0,0)</item>
 	<item name="60" type="3">point(0,75,0)</item>
 	<item name="61" type="3">point(35,75,0)</item>
