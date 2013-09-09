@@ -11,7 +11,7 @@
 ProjectionMappingDemoApp::ProjectionMappingDemoApp() {
 	addModifier(new poCamera2D(poColor::black));
 	
-	image = new poRectShape("ghostly_02_grid.png");
+	image = new poRectShape("ghostly_02_small.png");
 	addChild(image);
 	
 	poFBO* imageFBO = new poFBO(image->getWidth(),image->getHeight());

@@ -17,7 +17,7 @@ poMesh2D::poMesh2D(int r, int c, poTexture* tex)
 	for(int y=0; y<r; y++) {
 		for(int x=0; x<c; x++) {
 			points[y*c+x] = poPoint(x*step_x, y*step_y, 0);
-			coords[y*c+x] = poPoint(x/(float)(c-1), y/(float)(r-1), 0);
+			coords[y*c+x] = poPoint(x/(float)(c-1), 1 - y/(float)(r-1), 0);
 		}
 	}
 	
