@@ -2,7 +2,7 @@
 #include "poApplication.h"
 
 MappingHandle::MappingHandle(int x, int y)
-:	poOvalShape(10,10,30)
+:	po::OvalShape(10,10,30)
 ,	x(x)
 ,	y(y)
 ,	selected(false)
@@ -12,7 +12,7 @@ MappingHandle::MappingHandle(int x, int y)
 }
 
 
-MappingObject::MappingObject(int _numRows, int _numColumns, poTexture *tex):
+MappingObject::MappingObject(int _numRows, int _numColumns, po::Texture *tex):
 numRows(_numRows),
 numCols(_numColumns)
 {
@@ -26,18 +26,18 @@ numCols(_numColumns)
 			float xPos = (x / (float)numCols) * tex->getWidth();
 			float yPos = (y / (float)numRows) * tex->getHeight();
 						  
-			handle->position = poPoint(xPos, yPos, 0.f);
+			handle->position = po::Point(xPos, yPos, 0.f);
 			handle->index = y * numCols + x;
-			handle->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this);
-			handle->addEvent(PO_MOUSE_DRAG_INSIDE_EVENT, this);
+			handle->addEvent(po::MOUSE_DOWN_INSIDE_EVENT, this);
+			handle->addEvent(po::MOUSE_DRAG_INSIDE_EVENT, this);
             handle->visible = false;
 			handles.push_back(handle);
 			addChild(handles.back());
 		}
 	}
 	
-	addEvent(PO_MOUSE_UP_EVENT,  this);
-	addEvent(PO_KEY_DOWN_EVENT, this);
+	addEvent(po::MOUSE_UP_EVENT,  this);
+	addEvent(po::KEY_DOWN_EVENT, this);
 	
 	index_selected = -1;
 }
@@ -59,17 +59,17 @@ void MappingObject::drawAfter(){
 		for(int i=0; i<handles.size(); i++)
 		{
 			MappingHandle* handle = handles[i];
-			poPoint& handle_pos = handle->position;
+			po::Point& handle_pos = handle->position;
 
 			if(handle->y > 0){
 				int index = (handle->y-1)*numCols + handle->x;
-				poPoint pos = handles[index]->position;
+				po::Point pos = handles[index]->position;
 				po::drawLine(handle_pos, pos);
 			}
 
 			if(handle->x > 0){
 				int index = handle->y*numCols + handle->x - 1;
-				poPoint pos = handles[index]->position;
+				po::Point pos = handles[index]->position;
 				po::drawLine(handle_pos, pos);
 			}
 		}
@@ -78,11 +78,11 @@ void MappingObject::drawAfter(){
 
 void MappingObject::loadPositions(std::string path)
 {
-	poDictionary positions;
+	po::Dictionary positions;
 	positions.read(path);
 	
 	for(int i=0; i<handles.size(); i++){
-		poPoint p = positions.getPoint(poToString(i));
+		po::Point p = positions.getPoint(po::toString(i));
 		handles[i]->position = p;
 		mesh->points[i] = p;
 	}
@@ -91,9 +91,9 @@ void MappingObject::loadPositions(std::string path)
 
 void MappingObject::savePositions(std::string path)
 {
-	poDictionary positions;
+	po::Dictionary positions;
 	for(int i=0; i<handles.size(); i++){
-		positions.set(poToString(i), handles[i]->position);
+		positions.set(po::toString(i), handles[i]->position);
 	}
 	
 	positions.write(path);
@@ -129,7 +129,7 @@ void MappingObject::updateSelectedHandle()
 }
 
 
-void MappingObject::moveSelectedHandles(poPoint p)
+void MappingObject::moveSelectedHandles(po::Point p)
 {
 	for(int i=0; i<handles.size(); i++){
 		MappingHandle *h = handles[i];
@@ -144,12 +144,12 @@ void MappingObject::moveSelectedHandles(poPoint p)
 }
 
 
-void MappingObject::eventHandler(poEvent *event)
+void MappingObject::eventHandler(po::Event *event)
 {
 	MappingHandle *h = (MappingHandle *) event->source;
 	
 	switch (event->type) {
-		case PO_MOUSE_DOWN_INSIDE_EVENT:
+		case po::MOUSE_DOWN_INSIDE_EVENT:
 			// deselect all handles
 			for(int i=0; i<handles.size(); i++){
 				handles[i]->selected = false;
@@ -167,7 +167,7 @@ void MappingObject::eventHandler(poEvent *event)
 			
 			break;
 		
-		case PO_MOUSE_DRAG_INSIDE_EVENT:
+		case po::MOUSE_DRAG_INSIDE_EVENT:
 		{
 			h->position = objectToLocal(event->source, event->localPosition);
 			
@@ -176,24 +176,24 @@ void MappingObject::eventHandler(poEvent *event)
 			
 			break;
 		}
-		case PO_MOUSE_UP_EVENT:
+		case po::MOUSE_UP_EVENT:
 			break;
 			
-		case PO_KEY_DOWN_EVENT:
+		case po::KEY_DOWN_EVENT:
 		{
 			switch (event->keyCode) {
 					
 				// OS X
-				case PO_LEFT_ARROW:		moveSelectedHandles(poPoint(-1,0));	break;
-				case PO_RIGHT_ARROW:	moveSelectedHandles(poPoint(1,0));	break;
-				case PO_DOWN_ARROW:		moveSelectedHandles(poPoint(0,1));	break;
-				case PO_UP_ARROW:		moveSelectedHandles(poPoint(0,-1));	break;
+				case po::LEFT_ARROW:		moveSelectedHandles(po::Point(-1,0));	break;
+				case po::RIGHT_ARROW:	moveSelectedHandles(po::Point(1,0));	break;
+				case po::DOWN_ARROW:		moveSelectedHandles(po::Point(0,1));	break;
+				case po::UP_ARROW:		moveSelectedHandles(po::Point(0,-1));	break;
 				
 				// WINDOWS
-				case 37:	moveSelectedHandles(poPoint(-1,0));	break;
-				case 39:	moveSelectedHandles(poPoint(1,0));	break;
-				case 40:	moveSelectedHandles(poPoint(0,1));	break;
-				case 38:	moveSelectedHandles(poPoint(0,-1));	break;
+				case 37:	moveSelectedHandles(po::Point(-1,0));	break;
+				case 39:	moveSelectedHandles(po::Point(1,0));	break;
+				case 40:	moveSelectedHandles(po::Point(0,1));	break;
+				case 38:	moveSelectedHandles(po::Point(0,-1));	break;
 					
 				default:
 					break;
@@ -239,6 +239,6 @@ void MappingObject::eventHandler(poEvent *event)
 	}
 }
 
-void MappingObject::messageHandler(const std::string &msg, const poDictionary& dict) 
+void MappingObject::messageHandler(const std::string &msg, const po::Dictionary& dict)
 {
 }

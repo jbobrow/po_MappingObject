@@ -6,14 +6,14 @@
 
 #include "poShapeBasics2D.h"
 
-class poMesh2D : public poObject
+class poMesh2D : public po::Object
 {
 public:
-    poMesh2D(int rows, int columns, poTexture* tex);
+    poMesh2D(int rows, int columns, po::Texture* tex);
     void draw();
 	
     int numRows, numColumns;
-	std::vector<poPoint> points, coords;
+	std::vector<po::Point> points, coords;
 	std::vector<uint16_t> indices;
-	poTexture* texture;
+	po::Texture* texture;
 };

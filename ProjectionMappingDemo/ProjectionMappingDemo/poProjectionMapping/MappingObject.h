@@ -8,10 +8,10 @@
 #include "poMesh2D.h"
 #include "poShapeBasics2D.h"
 
-const poColor selected_color = poColor(1,0,1);
-const poColor deselected_color = poColor(0,0,0,.1);
+const po::Color selected_color = po::Color(1,0,1);
+const po::Color deselected_color = po::Color(0,0,0,.1);
 
-class MappingHandle : public poOvalShape
+class MappingHandle : public po::OvalShape
 {
 public:
 	MappingHandle(int, int);
@@ -21,10 +21,10 @@ public:
 	bool selected;
 };
 
-class MappingObject : public poObject
+class MappingObject : public po::Object
 {
 public:
-	MappingObject(int _numRows, int _numColumns, poTexture* tex=NULL);
+	MappingObject(int _numRows, int _numColumns, po::Texture* tex=NULL);
 	virtual ~MappingObject();
 	
 	void loadPositions(std::string path = "positions.xml");
@@ -34,12 +34,12 @@ public:
 	void hideHandles();
 	
 	void updateSelectedHandle();
-	void moveSelectedHandles(poPoint p);
+	void moveSelectedHandles(po::Point p);
 	
 	virtual void update();
 	virtual void drawAfter();
-	virtual void eventHandler(poEvent *event);
-	virtual void messageHandler(const std::string &msg, const poDictionary& dict=poDictionary());
+	virtual void eventHandler(po::Event *event);
+	virtual void messageHandler(const std::string &msg, const po::Dictionary& dict=po::Dictionary());
 	
 	poMesh2D	*mesh;
 	int numRows;

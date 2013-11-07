@@ -36,3 +36,13 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+
+build/
+
+DerivedData
+*.xcworkspace
+*.xcuserdata
+xcuserdata/
+
+*.DS_STORE

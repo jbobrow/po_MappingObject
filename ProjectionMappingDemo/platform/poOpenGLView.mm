@@ -10,8 +10,6 @@
 #import "AppDelegate.h"
 #include "poWindow.h"
 
-#define ASSERTGL() { int err = glGetError(); if(err != GL_NO_ERROR) {printf("x%06x\n", err); assert(false);} }
-
 static NSLock *lock = [[NSLock alloc] init];
 
 CVReturn MyDisplayLinkCallback (CVDisplayLinkRef displayLink,

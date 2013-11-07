@@ -1,12 +1,13 @@
-/*	Created by Jonathan Bobrow on 1/23/13.
+/*	Created by Bruce Drummond on 11/7/13.
  *	Copyright 2013 __MyCompanyName__. All rights reserved.
  */
 
 #include "poObject.h"
+
 #include "MappingObject.h"
 #include "poFBO.h"
 
-class ProjectionMappingDemoApp : public poObject {
+class ProjectionMappingDemoApp : public po::Object {
 public:
 	ProjectionMappingDemoApp();
 	virtual ~ProjectionMappingDemoApp();
@@ -15,15 +16,15 @@ public:
     
     virtual void draw();
 	
-    virtual void eventHandler(poEvent *event);
+    virtual void eventHandler(po::Event *event);
 	
-    virtual void messageHandler(const std::string &msg, const poDictionary& dict=poDictionary());
-	
-	poObject *container;
+    virtual void messageHandler(const std::string &msg, const po::Dictionary& dict=po::Dictionary(), const po::Object *sender=NULL);
+private:
+	po::Object *container;
 	
 	MappingObject *map;
 	
-	poRectShape *image;
-	poFBO		*imageFBO;
+	po::RectShape *image;
+	po::FBO		*imageFBO;
 };
 

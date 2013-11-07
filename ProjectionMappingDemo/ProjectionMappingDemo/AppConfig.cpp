@@ -8,14 +8,15 @@
 #include "poApplication.h"
 #include "ProjectionMappingDemoApp.h"
 
-poObject *createObjectForID(uint uid) {
-	return new ProjectionMappingDemoApp();
-}
+namespace po {
+    po::Object *createObjectForID(uint uid) {
+        return new ProjectionMappingDemoApp();
+    }
 
-void setupApplication() {
-	lookUpAndSetPath("resources");
-	applicationCreateWindow(0, WINDOW_TYPE_NORMAL, "ProjectionMappingDemo", 100, 100, 800, 600);
-}
+    void setupApplication() {
+        applicationCreateWindow(0, po::WINDOW_TYPE_NORMAL, "ProjectionMappingDemo", 100, 100, 1024, 768);
+    }
 
-void cleanupApplication() {
-}
+    void cleanupApplication() {
+    }
+} /*End po Namespace*/
